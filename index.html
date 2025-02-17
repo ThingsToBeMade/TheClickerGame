@@ -1,0 +1,125 @@
+<html>
+<head>
+    <a 
+        src=hq720 (1).jpg>
+        <img id="jynxzipic">
+    <style>
+        /* Set display to none for image*/
+        #image {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <img id="image" src=
+"hq720 (1).jpg"
+            alt="GFG image" />
+    </div>
+    <button class="jynxzipicture" type="button" onclick="show()" id="btnID">
+        Click for Cool Jynxzi Pic. </button>
+
+    <script>
+        function show() {
+ 
+            document.getElementById('image')
+                .style.display = "block";
+            document.getElementById('btnID')
+                .style.display = "none";
+        }
+    </script>
+    <div class="game">
+    <title>Clicker Game</title>
+    <style>
+            .jynxzipicture{
+                background-color: aqua;
+                color: rgb(105, 0, 105);
+                margin-left: 1480px;
+            }
+                image{
+                    display: block;
+                    width: 586px; height: 286px;
+                }
+        .game{
+            padding-top: 300px;
+        }
+        body {
+            background-color: rgb(29, 29, 29);
+            color: white;
+            text-align: center;
+            
+        }
+        button {
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5%;
+            font-size: 24px;
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        .delete-btn{
+            background-color: red;
+            color: black;
+        }
+            .deletiontexts{
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                margin-top: 8000px;
+
+            }
+                .jynxzipic{
+                    background-color: aqua;
+                    color: rgb(60, 0, 116);
+                    margin-left:1500px;
+                   scale: .8;
+                   
+                }
+    </style>
+</head>
+<body onload="getCounter()">
+
+    <h1>Clicker Game</h1>
+    <button onclick="countClicks()">Click Me!</button>
+
+    <p id="output">0</p>
+</div class="game">
+    <script>
+        let count = 0;
+
+        function countClicks() {
+            count++;
+            document.getElementById("output").innerText = count;
+            localStorage.setItem("clickCount", count); // Save to local storage
+        }
+
+        function getCounter() {
+            let savedCount = localStorage.getItem("clickCount");
+            if (savedCount) {
+                count = parseInt(savedCount);
+                document.getElementById("output").innerText = count;
+            }
+        }
+    </script>
+        <h1 class="deletiontexts">Wipe ALL progress:</h1>
+    <div class="deletediv">
+    <button class="delete-btn" onclick="confirmDelete()">Delete Progress</button>
+    </div deletediv>
+    <script>
+        function confirmDelete() {
+            let confirmAction = confirm("Are you sure you want to delete your progress?");
+            if (confirmAction) {
+                localStorage.removeItem("clickCount"); // Remove saved count
+                document.getElementById("output").innerText = "0"; // Reset displayed count
+                count = 0; // Reset counter variable
+            }
+        }
+    </script>
+    <style>
+
+    </style>
+
+</body>
+</html>
